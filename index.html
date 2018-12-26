@@ -7,12 +7,29 @@
     <style>
       body {
         font-family: 'Crimson Text', serif;
-        font-size: 60px;
+        font-size: 50px;
+      }
+      .item1 { grid-area: main; }
+      .item2 { grid-area: doodle; }
+      .grid-container {
+        display: grid;
+        grid-template-areas:
+          'main doodle';
+        grid-gap: 10px;
+      }
+
+      .grid-container > div {
+        background-color: rgba(255, 255, 255, 0.8);
+        text-align: center;
+        padding: 20px 0;
+        font-size: 30px;
       }
     </style>
   </head>
   <body>
-    <div> "Hello!" said <mark>Dahin</mark>. "I am a third-year studying Computer Science and Economics at UC Berkeley."</div>
-    <img src="dahin.gif">
+    <div class="grid-container">
+      <div class="item1">"Hello!" said <mark>Dahin</mark>. "I am a third-year studying Computer Science and Economics at UC Berkeley."</div>
+      <div class="item2"><img src="dahin.gif"></div>
+    </div>
   </body>
 </html>
